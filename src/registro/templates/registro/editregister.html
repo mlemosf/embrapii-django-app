@@ -1,0 +1,9 @@
+{% include "registro/header.html" %}
+{% block contact %}
+	<div class="container" style="padding:50px">
+		<h1 style="color:#fff">Contato</h1>
+		{% for c in content %}
+			<p style="color:#fff">{{ c }}</p>
+		{% endfor %}
+	</div>
+	{% endblock %}

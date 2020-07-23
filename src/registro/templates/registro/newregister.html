@@ -1,0 +1,30 @@
+{% include "registro/header.html" %}
+{% block home %}
+	<div class="container" style="padding:50px">
+		<h1 style="color:#000">Teste Rápido - Novo teste</h1>
+		
+		<form action="{{register.id}}?_method=DELETE" method="post">
+			<div class="form-group">
+				<label for="inputNome">Nome completo</label>
+				<input type="text" class="form-control" name="name" id="inputNome" aria-describedby="text" placeholder="Nome completo">
+				<label for="inputData">Data de nascimento (dd/mm/aaaa)</label>
+				<input type="date" class="form-control" name="birthdate" id="inputData" aria-describedby="text" placeholder="Data de nascimento">
+				<label for="selectTipoTeste">Tipo de teste realizado</label>
+				<select id="selectTipoTeste" name="testtype" class="form-control">
+					<option>RT-PCR</option>
+					<option>Sorologia</option>
+					<option>Teste Rápido - Antígenos</option>
+					<option>Teste Rápido - Anticorpos</option>
+				</select>
+				<label for="selectResultado">Tipo de teste realizado</label>
+				<select id="selectResultado" name="testresult" class="form-control">
+					<option>Positivo</option>
+					<option>Negativo</option>
+				</select>
+			</div>
+			<input type="submit" value="Post">
+		</form>
+
+	</div>
+
+{% endblock %}
